@@ -5,8 +5,8 @@
 #Variables to customize the range.
 #Warning: This brute-force method only runs quickly for 3-digit numbers.
 #It runs moderately with 4-digit ranges and slowly beyond that.
-l = 1000 #lower bound
-u = 9999 + 1 #upper bound
+l = 100 #lower bound
+u = 999 + 1 #upper bound
 
 print("The largest palindrome between 100x100 and 999x999 is", max(a*b for a in range(l, u) for b in range(l, u) if str(a*b)==str(a*b)[::-1]))
 #print(list(a*b for a in range(l, u) for b in range(l, u) if str(a*b)==str(a*b)[::-1]))

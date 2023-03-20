@@ -1,3 +1,6 @@
+# Project Euler -- Problem 3
+# https://projecteuler.net/problem=3
+
 # This is not my solution but is the fastest one
 # that I have found for numbers less than 10^21.
 # https://blog.dreamshire.com/solutions/project_euler/project-euler-problem-003-solution/

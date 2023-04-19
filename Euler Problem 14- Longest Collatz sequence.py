@@ -1,3 +1,7 @@
+# Project Euler -- Promblem 14: Longest Collatz Sequence
+# https://projecteuler.net/problem=13
+
+
 '''
 In 1937, a German mathematician named Lothar Collatz formulated a conjecture
 (it still remains unproven) that can be described in the following way:

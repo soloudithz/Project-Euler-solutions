@@ -1,5 +1,5 @@
 # Project Euler -- Promblem 15: Lattice Paths
-# https://projecteuler.net/problem=13
+# https://projecteuler.net/problem=15
 
 import time
 

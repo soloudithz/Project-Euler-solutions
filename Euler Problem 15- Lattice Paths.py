@@ -29,11 +29,12 @@ for row in grid:
 # Treating the grid like a Pascal's triangle, each of the interior
 # zeroes is replaced with the sum of the digit above and the digit
 # to the left.
-for row in range(1, len(grid)):
+for row in range(len(grid)):
     for element in range(len(grid[row])):
-        if (row or element) == 0:
+        if (row == 0) or (element == 0):
             pass
-        grid[row][element] = grid[row-1][element] + grid[row][element-1]
+        else:
+            grid[row][element] = grid[row-1][element] + grid[row][element-1]
 
 # Un-comment to print a grid showing the total number of paths to any
 # point from a corner origin.

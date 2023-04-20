@@ -3,7 +3,7 @@
 
 import time
 
-n = int(input('Size of grid: '))
+n = int(input('Size of square grid: '))
 start_time = time.time()   # to track how long the program takes to run
 
 # Create an initial grid of zeroes and ones. The numbers on the top row

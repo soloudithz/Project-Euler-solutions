@@ -30,16 +30,16 @@ n = int(input("Find amicable numbers to: "))
 
 for i in range(2, n+1):
     #print("i: ", i)
-    check_num = sum(proper_divisors_of(i))
-    #print("check_num: ", check_num)
-    if i != check_num:
-        if ((i, check_num) not in amicable_nums) and ((check_num, i) not in amicable_nums):
-            if sum(proper_divisors_of(check_num)) == i:
-                #print(i, "and", check_num, "are amicable numbers!")
-                amicable_nums.append((i, check_num))
-for i in amicable_nums:
-    subtotals.append(sum(i))
-sum_of_amicable_nums = sum(subtotals)
+    sum_of_proper_divisors = sum(proper_divisors_of(i))
+    #print("sum_of_proper_divisors: ", sum_of_proper_divisors)
+    if i != sum_of_proper_divisors:
+        if sum(proper_divisors_of(sum_of_proper_divisors)) == i:
+            #print(i, "and", sum_of_proper_divisors, "are amicable numbers!")
+            if i not in amicable_nums:
+                amicable_nums.append(i)
+            if sum_of_proper_divisors not in amicable_nums and sum_of_proper_divisors <= n:
+                amicable_nums.append(sum_of_proper_divisors)
+sum_of_amicable_nums = sum(amicable_nums)
 
 print("The sum of all the amicable numbers under {output:,} ".format(output=n) + "is {output:,}.".format(output=sum_of_amicable_nums))
 print('This program took', time.time() - start_time, 'seconds to run.')
